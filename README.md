@@ -58,3 +58,34 @@ O projeto encontra-se em uma etapa inicial: os métodos dos três modelos físic
 
 - `contexto-diagrama-poroelasticidade.md`: descrição conceitual do domínio e da arquitetura;
 - `diagrama-uml-quantidade-classes-reduzidas-e-nomes-representativos.jpeg`: diagrama UML das classes e de seus relacionamentos.
+
+## Estrutura do Projeto
+
+```text
+simulador-de-ondas-poroelasticas/
+├── src/
+│   ├── fisica/
+│   │   ├── ModeloPoroelastico.hpp
+│   │   ├── ModeloBiotNaoDissipativo.hpp
+│   │   ├── ModeloBiotDissipativo.hpp
+│   │   └── ModeloBiotJKD.hpp
+│   ├── modelo/
+│   │   ├── ParametrosSimulacao.hpp
+│   │   ├── PropriedadesMeioPoroso.hpp
+│   │   ├── PropriedadesOnda.hpp
+│   │   └── ResultadoSimulacao.hpp
+│   ├── numerico/
+│   │   └── SolucionadorEquacoesPoroelasticas.hpp
+│   ├── simulacao/
+│   │   └── SimuladorOndasPoroelasticas.hpp
+│   └── main.cpp
+├── contexto-diagrama-poroelasticidade.md
+├── diagrama-uml-quantidade-classes-reduzidas-e-nomes-representativos.jpeg
+└── README.md
+```
+
+- `src/fisica`: contratos e implementações dos modelos físicos poroelásticos.
+- `src/modelo`: estruturas de entrada, propriedades físicas e resultados.
+- `src/numerico`: métodos para resolução das equações poroelásticas.
+- `src/simulacao`: coordenação do fluxo da simulação.
+- `src/main.cpp`: ponto de entrada e exemplo de execução do programa.
